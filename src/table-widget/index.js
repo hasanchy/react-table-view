@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import TableView from './table-view';
+import TableView from '../table-view';
 import UserDetails from './user-details';
 
 class TableWidget extends Component {
@@ -371,7 +371,7 @@ class TableWidget extends Component {
                          }
                      },
                      "checkbox":{
-                         "checked":true,
+                         "checked":false,
                          "value":8
                      }
                   }

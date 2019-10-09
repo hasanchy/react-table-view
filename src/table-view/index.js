@@ -3,6 +3,7 @@ import TableHeader from './table-header';
 import TableBody from './table-body';
 import PageLimitButton from './page-limit-button';
 import PaginationButtons from './pagination-buttons';
+import './table-view.css';
 
 class TableView extends Component {
     constructor(props) {

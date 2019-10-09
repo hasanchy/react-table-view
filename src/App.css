@@ -1,33 +1,66 @@
-
-
-
-.page_button {
-    display: inline-block;
-    min-width: 1em;
-    padding: 0em 1em;
-    margin-left: 1px;
-    text-align: center;
-    text-decoration: none !important;
-    cursor: pointer;
-    color: #333 !important;
-}
-.page_button.current {
-    color: #48B0F7 !important;
-    font-weight: bold;
-}
-.dataTables_pagination{
-	margin-top: "25px !important"; 
-	float: "right";
-}
-.dataTables_paginate{
-	padding-top: 0em !important;
-}
-.dataTables_info{
-	padding-left: 5px !important;
-	font-size: 13px !important;
+body {
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #333;
+    background-color: #e9ebee;
 }
 
+.m-t-5 {
+    margin-top: 5px;
+}
 
+.panel {
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    border-radius: 6px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    -webkit-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+    position: relative;
+    background-color: #fff;
+}
 
+.panel.panel-default {
+    border: 1px solid;
+    border-color: #d4d5d8 #ced0d3 #c0c0c4;
+}
 
-/*==================*/
+.panel .panel-heading {
+    background: transparent;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-bottom: 0px;
+    padding: 20px 20px 7px 20px;
+    position: relative;
+    z-index: 3;
+    color: inherit;
+}
+
+.panel-default>.panel-heading {
+    color: #333;
+    border-color: #ddd;
+}
+
+.panel .panel-heading.separator:after {
+    content: "";
+    height: 1px;
+    background: rgba(0, 0, 0, 0.08);
+    left: 16px;
+    right: 16px;
+    position: absolute;
+    bottom: 0;
+}
+
+.panel .panel-heading .panel-controls {
+    float: right;
+    margin-top: -3px;
+}
+
+.panel .panel-body {
+    padding: 20px;
+    padding-bottom: 40px;
+}
+

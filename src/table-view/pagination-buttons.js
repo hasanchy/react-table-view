@@ -46,6 +46,27 @@ class PaginationButtons extends Component {
         var nextPage = current_page + 1;
         
         return (
+            <div className="dataTables_paginate paging_simple_numbers">
+                <a className="btn pagination_button first disabled">
+                    <i className="fa fa-angle-double-left"></i>
+                </a>
+                <a className="btn pagination_button previous disabled">
+                    <i className="fa fa-angle-left"></i>
+                </a>
+                <span>
+                    <a className="btn pagination_button current active">1</a>
+                    <a className="btn pagination_button">2</a>
+                </span>
+                <a className="btn pagination_button next">
+                    <i className="fa fa-angle-right"></i>
+                </a>
+                <a className="btn pagination_button last">
+                    <i className="fa fa-angle-double-right"></i>
+                </a>
+            </div>
+        )
+        
+        /*return (
             <ul style={{listStyleType:"none",display:"inline-block",float:"right",marginTop:"10px",paddingLeft:"0px"}} className="WG_010_pagination_bottom">
                 <li className={"btn pagination_button " + prevClass} onClick={this.props.onPageChange.bind(this,1)}>
                     <i className="fa fa-angle-double-left" aria-hidden="true"></i>
@@ -61,7 +82,7 @@ class PaginationButtons extends Component {
                     <i className="fa fa-angle-double-right" aria-hidden="true"></i>
                 </li>
             </ul>
-        )
+        )*/
 	}
 	
 }
