@@ -236,7 +236,7 @@ class TableView extends Component {
     
     renderTable = () => {
         
-        return <table className='tableView' style={{borderCollapse:"collapse",backgroundColor:"rgb(255, 255, 255)",width:"100%", color:"#333"}}>
+        return <table className='table' style={{borderCollapse:"collapse",backgroundColor:"rgb(255, 255, 255)",width:"100%"}}>
             <TableHeader
                 thead={this.state.thead} 
                 sort={this.state.sort}
@@ -275,7 +275,16 @@ class TableView extends Component {
     }
     
     renderSearchBox = () => {
-        return <input className="search-input form-control m-r-20" value={this.state.searchKeyword} style={{height:"35px",padding:"5px",width:"250px",float:"right",border:"1px solid rgba(221, 221, 221, 0.7)"}} placeholder="search..." onChange={this.handleTableSearch}/>
+        
+        return <div style={{float:"right",width:"25%"}}>
+            <div className="input-group" style={{width:"100%"}}>
+                <input type="text" className="form-control search-input" value={this.state.searchKeyword}  name="search" placeholder="Search..." onChange={this.handleTableSearch}/>
+                <span className="input-group-btn">
+                    <button className="btn btn-default" type="submit"><i className="fa fa-search m-r-5"></i></button>
+                </span>
+            </div>
+        </div>
+        
     }
     
     render() {

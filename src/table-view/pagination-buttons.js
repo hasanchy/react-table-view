@@ -36,8 +36,8 @@ class PaginationButtons extends Component {
         
         var active;
         for (var i = start_page_number; i <= end_page_number; i++) {
-            active = ( i === current_page ) ? "active" : ""; 
-            pages.push(<li key={Math.random()} className={"btn pagination_button " + active} onClick={this.props.onPageChange.bind(this,i)}>{i}</li>);
+            active = ( i === current_page ) ? "current active" : ""; 
+            pages.push(<a key={Math.random()} className={"btn pagination_button " + active} onClick={this.props.onPageChange.bind(this,i)}>{i}</a>);
         }
         var prevClass = ( current_page > 1 ) ? "" : "disabled";
         var nextClass = ( current_page < total_page ) ? "" : "disabled";
@@ -47,42 +47,23 @@ class PaginationButtons extends Component {
         
         return (
             <div className="dataTables_paginate paging_simple_numbers">
-                <a className="btn pagination_button first disabled">
+                <a className={"btn pagination_button first " + prevClass} onClick={this.props.onPageChange.bind(this,1)}>
                     <i className="fa fa-angle-double-left"></i>
                 </a>
-                <a className="btn pagination_button previous disabled">
+                <a className={"btn pagination_button previous " + prevClass} onClick={this.props.onPageChange.bind(this,prevPage)}>
                     <i className="fa fa-angle-left"></i>
                 </a>
                 <span>
-                    <a className="btn pagination_button current active">1</a>
-                    <a className="btn pagination_button">2</a>
+                    {pages}
                 </span>
-                <a className="btn pagination_button next">
+                <a className={"btn pagination_button next " + nextClass} onClick={this.props.onPageChange.bind(this,nextPage)}>
                     <i className="fa fa-angle-right"></i>
                 </a>
-                <a className="btn pagination_button last">
+                <a className={"btn pagination_button last " + nextClass} onClick={this.props.onPageChange.bind(this,total_page)}>
                     <i className="fa fa-angle-double-right"></i>
                 </a>
             </div>
         )
-        
-        /*return (
-            <ul style={{listStyleType:"none",display:"inline-block",float:"right",marginTop:"10px",paddingLeft:"0px"}} className="WG_010_pagination_bottom">
-                <li className={"btn pagination_button " + prevClass} onClick={this.props.onPageChange.bind(this,1)}>
-                    <i className="fa fa-angle-double-left" aria-hidden="true"></i>
-                </li>
-                <li className={"btn pagination_button " + prevClass} onClick={this.props.onPageChange.bind(this,prevPage)}>
-                    <i className="fa fa-angle-left" aria-hidden="true"></i>
-                </li>
-                {pages}
-                <li className={"btn pagination_button " + nextClass} onClick={this.props.onPageChange.bind(this,nextPage)}>
-                    <i className="fa fa-angle-right" aria-hidden="true"></i>
-                </li>
-                <li className={"btn pagination_button " + nextClass} onClick={this.props.onPageChange.bind(this,total_page)}>
-                    <i className="fa fa-angle-double-right" aria-hidden="true"></i>
-                </li>
-            </ul>
-        )*/
 	}
 	
 }

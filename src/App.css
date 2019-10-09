@@ -10,6 +10,10 @@ body {
     margin-top: 5px;
 }
 
+.text-left {
+    text-align: left !important;
+}
+
 .panel {
     -webkit-box-shadow: none;
     box-shadow: none;
@@ -54,6 +58,13 @@ body {
     bottom: 0;
 }
 
+.panel-heading a:not(.btn) {
+    color: #2C2C2C !important;
+    opacity: .4;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
 .panel .panel-heading .panel-controls {
     float: right;
     margin-top: -3px;
@@ -61,6 +72,83 @@ body {
 
 .panel .panel-body {
     padding: 20px;
-    padding-bottom: 40px;
+    padding-bottom: 70px;
 }
 
+
+.table thead tr th {
+    text-transform: uppercase;
+    font-weight: 600;
+    font-family: inherit;
+    font-size: 13px;
+    padding-top: 14px;
+    padding-bottom: 14px;
+    vertical-align: middle;
+    border-bottom: 1px solid rgba(221, 221, 221, 0.7);
+    color: rgba(20, 20, 20, 0.35);
+}
+
+tbody {
+    display: table-row-group;
+    vertical-align: middle;
+    border-color: inherit;
+}
+
+.table tbody tr td {
+    background: #fff;
+    border-bottom: 1px solid rgba(221, 221, 221, 0.7);
+    border-top: 0px;
+    padding: 8px;
+    font-size: 13.5px;
+}
+
+.form-control {
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid rgba(0, 0, 0, 0.07);
+    font-family: inherit, arial, sans-serif;
+    -webkit-appearance: none;
+    color: #141414;
+    outline: 0;
+    height: 35px !important;
+    width: 85%;
+    padding: 0px 12px;
+    line-height: normal;
+    font-size: 14px;
+    font-weight: normal;
+    vertical-align: middle;
+    min-height: 35px;
+    -webkit-transition: all 0.12s ease;
+    transition: all 0.12s ease;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    border-radius: 6px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    -webkit-transition: background 0.2s linear 0s;
+    transition: background 0.2s linear 0s;
+}
+
+.input-group .form-control:last-child, .input-group-addon:last-child, .input-group-btn:first-child>.btn-group:not(:first-child)>.btn, .input-group-btn:first-child>.btn:not(:first-child), .input-group-btn:last-child>.btn, .input-group-btn:last-child>.btn-group>.btn, .input-group-btn:last-child>.dropdown-toggle {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+.search-input {
+    border-radius: 25px;
+}
+
+button, input, optgroup, select, textarea {
+    margin: 0;
+    font: inherit;
+    color: inherit;
+}
+
+
+.btn-default, .btn-default:focus {
+    color: #5e5e5e;
+    background-color: #fff;
+    border-color: #ebebeb;
+    padding: 7px;
+    margin-left:-26px;
+}

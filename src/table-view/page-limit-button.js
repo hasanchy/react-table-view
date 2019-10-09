@@ -18,21 +18,17 @@ class PageLimitButton extends Component {
     
     render() {
         return (
-            <div>
-                <div style={{float:"left",paddingRight:"5px",paddingTop:"7px"}}>
-                    Show
-                </div>
-                <div style={{float:"left",width:"60px"}}>
-                    <select value={this.props.limit} onChange={this.handleOnChange.bind(this)}>
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="10">10</option>
-                        <option value="25">25</option>
-                        <option value="50">50</option>
-                        <option value="100">100</option>
-                        <option value="250">250</option>
-                    </select>
-                </div>
+            <div className="form-group" style={{float:"left", marginTop:"25px"}}>
+                <label>Page size</label>
+                <select style={{marginLeft:"5px"}} value={this.props.limit} onChange={this.handleOnChange.bind(this)}>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="10">10</option>
+                    <option value="25">25</option>
+                    <option value="50">50</option>
+                    <option value="100">100</option>
+                    <option value="250">250</option>
+                </select>
             </div>
         )
 	}

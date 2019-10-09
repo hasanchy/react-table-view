@@ -1,5 +1,6 @@
 .dataTables_paginate {
     float: right;
+    margin-top: 25px !important;
 }
 
 .pagination_button.disabled {
