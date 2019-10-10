@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Checkbox from '../form-elements/checkbox';
+import Checkbox from './checkbox';
 
 class TableBody extends Component {
     constructor(props) {
@@ -63,8 +63,6 @@ class TableBody extends Component {
     }
     
     render() {
-        
-        console.log( 'rendering body' );
         
         var tbody = (this.props.searchKeyword !== "") ? this.getSearchedData() : this.props.tbody;
         this.state.totalRecords = tbody.tr.length;

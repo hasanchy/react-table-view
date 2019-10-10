@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Checkbox from '../form-elements/checkbox';
+import Checkbox from './checkbox';
 
 class TableHeader extends Component {
     constructor(props) {
