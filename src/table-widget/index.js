@@ -10,23 +10,15 @@ class TableWidget extends Component {
         super(props);
         this.state = {
             searchKeyword:"",
-            checkAll: false,
             selectionInfo:"",
-            ajax: {
-                "status":true,
-                "total_records":58,
-                "page_limit":25,
-                "current_page":1
-            },
             data: ExpandData,
             totalRecords: 5,
-            tableKey: Math.random(),
             sort:{
                 key:"name",
-                direction:"asc"
+                direction:"desc"
             },
             page:1,
-            limit:25
+            limit:10
         }
     }
     
@@ -39,6 +31,23 @@ class TableWidget extends Component {
           selectionInfo: selectionInfo
        });
    }
+   
+    handleSortChange( sort ){
+        this.setState({
+            sort:sort
+        });
+    }
+    
+    handlePageChange( page ){
+        // this.setState({
+        //     page:page,
+        //     data: CheckboxData,
+        // });
+    }
+    
+    handleLimitChange( limit ){
+        
+    }
     
     render() {
         var externalComponents = {
@@ -57,9 +66,9 @@ class TableWidget extends Component {
                           searchKeyword={this.state.searchKeyword}
                           externalComponents={externalComponents}
                           onRowSelect={this.handleRowSelect}
-                          // onPageChange={this.handlePageChange}
-                          onSortChange={this.handleSortChange}
-                          // onLimitChange={this.handleLimitChange}
+                          onPageChange={this.handlePageChange.bind(this)}
+                          //onSortChange={this.handleSortChange.bind(this)}
+                          // onLimitChange={this.handleLimitChange.bind(this)}
                       />
             </div>
         )

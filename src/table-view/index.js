@@ -94,8 +94,7 @@ class TableView extends Component {
     }
     
     handlePageLimitChange = ( pageLimit ) => {
-        console.log( pageLimit);
-        if(this.props.onPageChange){
+        if(this.props.onLimitChange){
             this.props.onLimitChange(pageLimit);
         }else{
             this.setState({
@@ -156,9 +155,13 @@ class TableView extends Component {
     }
     
     handleTotalRecordsChange = ( totalRecords ) => {
-        this.setState({
-            totalRecords:totalRecords
-        })
+        console.log( totalRecords );
+        if( !this.props.onPageChange){
+            console.log( totalRecords );
+            this.setState({
+                totalRecords:totalRecords
+            })
+        }
     }
     
     handleExpandRow = ( index, status ) => {
@@ -235,6 +238,8 @@ class TableView extends Component {
     }
     
     renderTable = () => {
+        
+        var doPagination = ( 'onPageChange' in this.props ) ? false : true;
         
         return <table className='table' style={{borderCollapse:"collapse",backgroundColor:"rgb(255, 255, 255)",width:"100%"}}>
             <TableHeader

@@ -67,7 +67,13 @@ class TableBody extends Component {
         var tbody = (this.props.searchKeyword !== "") ? this.getSearchedData() : this.props.tbody;
         this.state.totalRecords = tbody.tr.length;
         
-        var start = this.props.limit * (this.props.page - 1);
+        var start;
+        if(this.props.doPagination){
+            start = this.props.limit * (this.props.page - 1);
+        }else {
+            start = 0;
+        }
+        
         var end = parseInt(start) + parseInt(this.props.limit) - 1;
         if( end > (parseInt(this.state.totalRecords)-1) ){
             end = parseInt(this.state.totalRecords)-1;
