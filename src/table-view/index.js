@@ -258,6 +258,7 @@ class TableView extends Component {
                 onTotalRecordsChange={this.handleTotalRecordsChange}
                 onExpandRow={this.handleExpandRow}
                 onCheckboxUpdate={this.handleCheckboxUpdate}
+                doPagination={doPagination}
             />
         </table>
     }
