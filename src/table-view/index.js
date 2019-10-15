@@ -155,9 +155,9 @@ class TableView extends Component {
     }
     
     handleTotalRecordsChange = ( totalRecords ) => {
-        console.log( totalRecords );
+        //console.log( totalRecords );
         if( !this.props.onPageChange){
-            console.log( totalRecords );
+            //console.log( totalRecords );
             this.setState({
                 totalRecords:totalRecords
             })
@@ -205,7 +205,7 @@ class TableView extends Component {
     
     handleCheckboxAllUpdate = ( index ) => {
         
-        console.log( 'handleCheckboxAllUpdate' );
+        //console.log( 'handleCheckboxAllUpdate' );
         var thead = Object.assign({}, this.state.thead);
         var tbody = Object.assign({}, this.state.tbody);
         var checkedRows = Object.assign([], this.state.checkedRows);

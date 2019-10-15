@@ -13,7 +13,7 @@ class TableHeader extends Component {
     }
     
     render() {
-        console.log( 'rendering header' );
+        //console.log( 'rendering header' );
         var that = this;
         var tr = this.props.thead.tr;
         var tableRows = [];

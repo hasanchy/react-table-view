@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import TableView from '../table-view';
 import UserDetails from './user-details';
 import ExpandData from './expand-data';
-import CheckboxData from './checkbox-data';
+//import CheckboxData from './checkbox-data';
 
 class TableWidget extends Component {
     
@@ -66,7 +66,7 @@ class TableWidget extends Component {
                           searchKeyword={this.state.searchKeyword}
                           externalComponents={externalComponents}
                           onRowSelect={this.handleRowSelect}
-                          //onPageChange={this.handlePageChange.bind(this)}
+                          onPageChange={this.handlePageChange.bind(this)}
                           //onSortChange={this.handleSortChange.bind(this)}
                           // onLimitChange={this.handleLimitChange.bind(this)}
                       />

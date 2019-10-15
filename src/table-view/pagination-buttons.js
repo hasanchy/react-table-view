@@ -13,7 +13,7 @@ class PaginationButtons extends Component {
     
     render() {
         
-        console.log( 'rendering pagination buttons' );
+        //console.log( 'rendering pagination buttons' );
         
         var limit = this.props.limit;
         var total = this.props.totalRecords;
