@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import TableView from '../table-view';
 import UserDetails from './user-details';
+import ActionButtons from './action-buttons';
 import ExpandData from './expand-data';
 import CheckboxData from './checkbox-data';
 
@@ -51,7 +52,8 @@ class TableWidget extends Component {
 	
 	render() {
 		var externalComponents = {
-			"UserDetails":UserDetails
+			"UserDetails":UserDetails,
+			"ActionButtons":ActionButtons
 		};
 		
 		return (

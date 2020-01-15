@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-class UserDetails extends Component {
+class ActionButtons extends Component {
 	
 	constructor(props) {
 		super(props);
@@ -22,16 +22,15 @@ class UserDetails extends Component {
 	}
 	
 	render(){
-		console.log( this.props.data );
 		return(
-			<div style={{padding:"20px"}}>
-				{this.props.data.description}
-				<div>
-					id = {this.props.data.id}
-				</div>
-			</div>
+			<span className="btn-group">
+				<a className="btn btn-default bold m-l-5">
+					<i className="fal fa-fw fa-pencil"></i>
+					<span>Edit</span>
+				</a>
+			</span>
 		);
 	}
 }
 
-export default UserDetails;
+export default ActionButtons;
