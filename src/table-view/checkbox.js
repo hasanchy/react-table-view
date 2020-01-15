@@ -3,12 +3,12 @@ import React, { Component } from 'react';
 class Checkbox extends Component {
 	
 	constructor(props) {
-        super(props);
-        var  checked = this.props.checked;
+		super(props);
+		var  checked = this.props.checked;
 		this.state = {
-            checked: checked
+			checked: checked
 		};
-    }
+	}
 
 	componentDidUpdate(prevProps, prevState, snapshot){
 		if(this.props.checked !== prevProps.checked){
@@ -28,7 +28,7 @@ class Checkbox extends Component {
 			this.props.onLoad( this.props.value, this.state.checked );
 		}
 	}
-    
+
 	shouldComponentUpdate( nextProps, nextState ){
 		var shallComponentUpdate = ( this.state.checked !== nextState.checked || this.props.checked !== nextProps.checked ) ? true : false;
 		return shallComponentUpdate;
@@ -36,7 +36,7 @@ class Checkbox extends Component {
 
 	handleChange = (value) => {
 		
-        var checked = (this.state.checked) ? false : true;
+		var checked = (this.state.checked) ? false : true;
 		this.setState({
 			checked: checked
 		});
@@ -47,12 +47,12 @@ class Checkbox extends Component {
 	}
 
 	render() {
-        return (
-            <div className="checkbox check-primary">
-    			<input type="checkbox" checked={this.state.checked} onChange={this.handleChange}/>
-    			<label onClick={this.handleChange}>{this.props.label}</label>
-    		</div>
-        )
+		return (
+			<div className="checkbox check-primary">
+				<input type="checkbox" checked={this.state.checked} onChange={this.handleChange}/>
+				<label onClick={this.handleChange}>{this.props.label}</label>
+			</div>
+		)
 
 	}
 	
