@@ -3,7 +3,6 @@ import TableHeader from './table-header';
 import TableBody from './table-body';
 import PageLimitButton from './page-limit-button';
 import PaginationButtons from './pagination-buttons';
-import './table-view.css';
 
 class TableView extends Component {
 	constructor(props) {
@@ -293,13 +292,22 @@ class TableView extends Component {
 		
 	}
 	
+	renderBottomComponents = () => {
+		return <div>
+			<div className="col-sm-6">
+				{this.renderPageSizeOption()}
+			</div>
+			<div className="col-sm-6">
+				{this.renderPaginationButtons()}
+			</div>
+		</div>
+	}
+	
 	render() {
 		return (
 			<div style={{ width: '100%' }}>
-				{this.renderSearchBox()}
 				{this.renderTable()}
-				{this.renderPageSizeOption()}
-				{this.renderPaginationButtons()}
+				{this.renderBottomComponents()}
 			</div>
 		)
 	}

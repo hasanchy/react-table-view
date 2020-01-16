@@ -36,11 +36,11 @@ class TableHeader extends Component {
 							direction = "desc";
 						}
 					}
-					tableHeaders.push( <th className={thClass} colSpan={colspan} key={Math.random()} style={{cursor:"pointer",padding:"10px 0 10px 5px"}} onClick={that.props.onSortData.bind(this,key,direction,j)}>{th[j].text} <i className={"fa fa-sort" + directionClass}/></th> );
+					tableHeaders.push( <th className={thClass} colSpan={colspan} key={Math.random()} style={{cursor:"pointer"}} onClick={that.props.onSortData.bind(this,key,direction,j)}>{th[j].text} <i className={"fa fa-sort" + directionClass}/></th> );
 				}else if(th[j].checkable){
 					tableHeaders.push( <th key={Math.random()}><Checkbox checked={tr[i].checkbox.checked} onClick={this.props.onCheckboxAllUpdate.bind(this,i)}/></th> );
 				}else{
-					tableHeaders.push( <th key={Math.random()} colSpan={colspan} style={{cursor:"pointer",padding:"10px 0 10px 5px"}}>{th[j].text}</th> );
+					tableHeaders.push( <th key={Math.random()} colSpan={colspan}>{th[j].text}</th> );
 				}
 				
 			}

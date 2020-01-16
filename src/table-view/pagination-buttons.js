@@ -46,7 +46,7 @@ class PaginationButtons extends Component {
 		var nextPage = current_page + 1;
 		
 		return (
-			<div className="dataTables_paginate paging_simple_numbers">
+			<div className="paging_simple_numbers">
 				<a className={"btn pagination_button first " + prevClass} onClick={this.props.onPageChange.bind(this,1)}>
 					<i className="fa fa-angle-double-left"></i>
 				</a>

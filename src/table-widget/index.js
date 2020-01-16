@@ -4,6 +4,7 @@ import UserDetails from './user-details';
 import ActionButtons from './action-buttons';
 import ExpandData from './expand-data';
 import CheckboxData from './checkbox-data';
+import '../table-view/table-view.css';
 
 class TableWidget extends Component {
 	
