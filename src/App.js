@@ -2,6 +2,7 @@ import React from 'react';
 import './assets/font-awesome/css/all.min.css';
 import './assets/report-designer.css';
 import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import TableWidget from './table-widget/index';
  
 function App() {

@@ -293,11 +293,11 @@ class TableView extends Component {
 	}
 	
 	renderBottomComponents = () => {
-		return <div>
-			<div className="col-sm-6">
+		return <div className="container-fluid">
+			<div className="pull-left">
 				{this.renderPageSizeOption()}
 			</div>
-			<div className="col-sm-6">
+			<div className="pull-right">
 				{this.renderPaginationButtons()}
 			</div>
 		</div>
