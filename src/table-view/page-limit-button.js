@@ -21,8 +21,6 @@ class PageLimitButton extends Component {
 			<div className="form-group">
 				<label>Page size</label>
 				<select style={{marginLeft:"5px"}} value={this.props.limit} onChange={this.handleOnChange.bind(this)}>
-					<option value="1">1</option>
-					<option value="2">2</option>
 					<option value="10">10</option>
 					<option value="25">25</option>
 					<option value="50">50</option>

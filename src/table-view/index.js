@@ -293,7 +293,7 @@ class TableView extends Component {
 	}
 	
 	renderBottomComponents = () => {
-		return <div className="container-fluid">
+		return <div className="container-fluid" style={{paddingLeft:"0px",paddingRight:"0px"}}>
 			<div className="pull-left">
 				{this.renderPageSizeOption()}
 			</div>

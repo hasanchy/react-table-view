@@ -90,24 +90,24 @@ class TableBody extends Component {
 			var index = (tbody.index) ? tbody.index[i] : i;
 			for(var j in td){
 				var style = (td[j].style) ? td[j].style : {};
+				var className = (td[j].class) ? td[j].class : "";
 				var expandIcon = "";
 				if(td[j].render){
-					;
-					tableColumns.push( <td key={Math.random()} style={style}>{td[j].render()}</td>);
+					tableColumns.push( <td key={Math.random()} className={className} style={style}>{td[j].render()}</td>);
 				}else if(td[j].component){
 					Component = that.props.externalComponents[ td[j].component.name ];
-					tableColumns.push( <td key={Math.random()} style={style}><Component data={td[j].component.data}/></td>);
+					tableColumns.push( <td key={Math.random()} className={className} style={style}><Component data={td[j].component.data}/></td>);
 				}else{
 					if(td[j].expandable){
 						var expandStyle = {cursor:"pointer"}
 						var chevronIcon = (tr[i].expand.status) ? "down" : "right";
 						
-						tableColumns.push( <td key={Math.random()} style={expandStyle} onClick={this.props.onExpandRow.bind(this,index)}>{td[j].text}<i className={"fas fa-fw fa-chevron-"+chevronIcon} style={{marginTop:"5px"}}></i></td> );
+						tableColumns.push( <td key={Math.random()} className={className} style={expandStyle} onClick={this.props.onExpandRow.bind(this,index)}>{td[j].text}<i className={"fas fa-fw fa-chevron-"+chevronIcon} style={{marginTop:"5px"}}></i></td> );
 					
 					}else if(td[j].checkable){
-						tableColumns.push( <td key={Math.random()} style={style}><Checkbox checked={tr[i].checkbox.checked} onChange={this.props.onCheckboxUpdate.bind(this,index)}/></td> );
+						tableColumns.push( <td key={Math.random()} className={className} style={style}><Checkbox checked={tr[i].checkbox.checked} onChange={this.props.onCheckboxUpdate.bind(this,index)}/></td> );
 					}else{
-						tableColumns.push( <td key={Math.random()} style={style}>{td[j].text}{expandIcon}</td> );
+						tableColumns.push( <td key={Math.random()} className={className} style={style}>{td[j].text}{expandIcon}</td> );
 					}
 					
 				}
